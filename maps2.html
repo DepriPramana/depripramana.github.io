@@ -26,7 +26,7 @@
 			
         writeAddressName(userLatLng);
 		
-		getJSON('https://api-gejala-v2.bersatulawancovid.id/dev/location/regional_rawan_intro?lat='+ position.coords.latitude +'&lon=' +position.coords.longitude, function(data) {
+		$.getJSON('https://api-gejala-v2.bersatulawancovid.id/dev/location/regional_rawan_intro?lat='+ position.coords.latitude +'&lon=' +position.coords.longitude, function(data) {
 			console.log(data);
 		});
 
