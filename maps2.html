@@ -42,17 +42,17 @@
 			
 			xhr.send();
 		};
-		getJSON('https://api-gejala-v2.bersatulawancovid.id/dev/location/regional_rawan_intro?lat='+ position.coords.latitude +'&lon=' +position.coords.longitudesss',  function(err, data) {
+		getJSON('https://persnickety-armor.000webhostapp.com/data.php?lat='+ position.coords.latitude +'&lon=' +position.coords.longitudesss,  function(err, data) {
     
 			if (err != null) {
 				console.error(err);
 			} else {
 				
-				//var text = `Date: ${data.date}
+				//var text = ${data.kode_kecamatan}
 				//Time: ${data.time}
 				//Unix time: ${data.milliseconds_since_epoch}`
 			
-				console.log(data.status);
+				//console.log(text);
 			}
 		});
 		
