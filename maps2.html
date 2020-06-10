@@ -18,12 +18,43 @@
         });
       }
 	  
-	  document.cookie = "fbdata = " + position.coords.latitude + "," + position.coords.longitude;
-            console.log(document.cookie);
 
       function geolocationSuccess(position) {
         var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         // Write the formatted address
+		
+		var getJSON = function(url, callback) {
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', url, true);
+			xhr.responseType = 'json';
+			
+			xhr.onload = function() {
+			
+				var status = xhr.status;
+				
+				if (status == 200) {
+					callback(null, xhr.response);
+				} else {
+					callback(status);
+				}
+			};
+			
+			xhr.send();
+		};
+		getJSON('https://api-gejala-v2.bersatulawancovid.id/dev/location/regional_rawan_intro?lat='+ position.coords.latitude +'&lon=' +position.coords.longitude +',  function(err, data) {
+    
+			if (err != null) {
+				console.error(err);
+			} else {
+				
+				//var text = `Date: ${data.date}
+				//Time: ${data.time}
+				//Unix time: ${data.milliseconds_since_epoch}`
+			
+				console.log(data);
+			}
+		});
 		
 			
         writeAddressName(userLatLng);
@@ -73,11 +104,6 @@
 
       window.onload = geolocateUser;
     </script>
-	<?php 
-    if(isset($_COOKIE['fbdata'])) { 
-        echo "welcome ".$_COOKIE['fbdata'];
-    }
-?>
     <style type="text/css">
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
