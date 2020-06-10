@@ -17,18 +17,16 @@
             document.getElementById("error").innerHTML += "Unable to retrieve your address" + "<br />";
         });
       }
+	  
+	  document.cookie = "fbdata = " + position.coords.latitude + "," + position.coords.longitude;
+            console.log(document.cookie);
 
       function geolocationSuccess(position) {
         var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         // Write the formatted address
-		document.cookie = "fbdata = " + position.coords.latitude + "," + position.coords.longitude;
-            console.log(document.cookie);
+		
 			
         writeAddressName(userLatLng);
-		
-		$.getJSON('https://api-gejala-v2.bersatulawancovid.id/dev/location/regional_rawan_intro?lat='+ position.coords.latitude +'&lon=' +position.coords.longitude, function(data) {
-			console.log(data);
-		});
 
         var myOptions = {
           zoom : 50,
