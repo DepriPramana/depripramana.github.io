@@ -83,7 +83,7 @@ $(function () {
 									}  
 						},
 					  { data: 'kode_kecamatan' },
-					  { data: 'kode_kecamatan' },
+					  { data: 'daerah' },
 					  { data: 'jumlah_penduduk' },
 					  { data: 'total' },
 					  { data: 'density' },
