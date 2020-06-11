@@ -51,7 +51,7 @@ $(function () {
 			lat: lat,
 			lng: lon,
 			radius: acc,
-			fillColor: '#0000FF',
+			fillColor: '#FFA500',
           fillOpacity: 0.5,
           strokeColor: '#0000FF',
           strokeOpacity: 0.5
