@@ -104,10 +104,10 @@ $(function () {
 	  
 	  function displayData(objData){
 		var x= "";	
-		var color = '#FFA500';
+		var color ="";
 		objData=JSON.parse(objData);
 		for (x in objData) {
-			if(objData[x].levelKerawanan > 1){color = '#dc3545';}			
+			if(objData[x].levelKerawanan > 1){color = '#dc3545';}else{color= '#FFA500'}			
 			 addData(objData[x].loc.lat, objData[x].loc.lon, 400, color, '<p>Ini lokasi serangan covid</p><p>Total: '+objData[x].total+' ,'+objData[x].daerah+'</p><p>LevelKerawanan: '+objData[x].levelKerawanan+'</p>');
 			}
 	  }
