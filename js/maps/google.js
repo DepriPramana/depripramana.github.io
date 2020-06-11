@@ -52,7 +52,7 @@ $(function () {
 			lng: lon,
 			radius: acc,
 			fillColor: color,
-          fillOpacity: 0.5,
+          fillOpacity: 0.8,
           strokeColor: '#0000FF',
           strokeOpacity: 0.5
 			});
@@ -107,7 +107,7 @@ $(function () {
 		var color = '#FFA500';
 		objData=JSON.parse(objData);
 		for (x in objData) {
-			if(objData[x].levelKerawanan > 1){color = '#8B0000';}			
+			if(objData[x].levelKerawanan > 1){color = '#dc3545';}			
 			 addData(objData[x].loc.lat, objData[x].loc.lon, 400, color, '<p>Ini lokasi serangan covid</p><p>Total: '+objData[x].total+' ,'+objData[x].daerah+'</p><p>LevelKerawanan: '+objData[x].levelKerawanan+'</p>');
 			}
 	  }
