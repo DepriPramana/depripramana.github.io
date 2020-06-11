@@ -107,7 +107,7 @@ $(function () {
 		
 		objData=JSON.parse(objData);
 		for (x in objData) {
-			 addData(objData[x].loc.lat, objData[x].loc.lon, 400, '<p>Ini lokasi serangan covid</p>');
+			 addData(objData[x].loc.lat, objData[x].loc.lon, 400, '<p>Ini lokasi serangan covid</p><p>Total: '+objData[x].total+'</p><p>LevelKerawanan: '+objData[x].levelKerawanan+'</p>');
 			}
 	  }
       GMaps.geolocate({
