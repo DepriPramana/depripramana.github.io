@@ -46,12 +46,12 @@ $(function () {
         });
       }
 	  
-	  function addData(lat, lon, acc, htmlData){
+	  function addData(lat, lon, acc, color, htmlData){
 		  markers.drawCircle({
 			lat: lat,
 			lng: lon,
 			radius: acc,
-			fillColor: '#FFA500',
+			fillColor: color,
           fillOpacity: 0.5,
           strokeColor: '#0000FF',
           strokeOpacity: 0.5
@@ -103,11 +103,12 @@ $(function () {
 	  
 	  
 	  function displayData(objData){
-		var x= "";	
-		
+		var x, color= "";	
+		var color = '#FFA500';
 		objData=JSON.parse(objData);
 		for (x in objData) {
-			 addData(objData[x].loc.lat, objData[x].loc.lon, 400, '<p>Ini lokasi serangan covid</p><p>Total: '+objData[x].total+' ,'+objData[x].daerah+'</p><p>LevelKerawanan: '+objData[x].levelKerawanan+'</p>');
+			if(objData[x].levelKerawanan > 1){color = '#FF0000';}			
+			 addData(objData[x].loc.lat, objData[x].loc.lon, 400, color, '<p>Ini lokasi serangan covid</p><p>Total: '+objData[x].total+' ,'+objData[x].daerah+'</p><p>LevelKerawanan: '+objData[x].levelKerawanan+'</p>');
 			}
 	  }
       GMaps.geolocate({
@@ -117,7 +118,7 @@ $(function () {
 			// Write the formatted address				
 		  writeAddressName(position.coords.latitude, position.coords.longitude);
 		  GetData(position.coords.latitude, position.coords.longitude);
-		  addData(position.coords.latitude, position.coords.longitude, 0, '<p>Ini lokasi anda</p>');
+		  addData(position.coords.latitude, position.coords.longitude, 0,'#FFA500', '<p>Ini lokasi anda</p>');
 		  //console.log(position.coords.accuracy);
         },
         error: function(error){
