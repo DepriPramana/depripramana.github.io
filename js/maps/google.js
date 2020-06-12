@@ -14,13 +14,13 @@ $(function () {
 		var tbhSembuh = myObj.sembuh.tambahan;
 		
 		document.getElementById("ttlKonfirmasi").innerHTML = numeral(ttlKonfirmasi).format('0,0');
-		document.getElementById("tbhKonfirmasi").innerHTML = tbhKonfirmasi;
-		document.getElementById("ttlPerawatan").innerHTML = ttlPerawatan;
-		document.getElementById("tbhPerawatan").innerHTML = tbhPerawatan;
-		document.getElementById("ttlMeninggal").innerHTML = ttlMeninggal;
-		document.getElementById("tbhMeninggal").innerHTML = tbhMeninggal;
-		document.getElementById("ttlSembuh").innerHTML = ttlSembuh;
-		document.getElementById("tbhSembuh").innerHTML = tbhSembuh;
+		document.getElementById("tbhKonfirmasi").innerHTML = numeral(tbhKonfirmasi).format('0,0');
+		document.getElementById("ttlPerawatan").innerHTML = numeral(ttlPerawatan).format('0,0');
+		document.getElementById("tbhPerawatan").innerHTML = numeral(tbhPerawatan).format('0,0');
+		document.getElementById("ttlMeninggal").innerHTML = numeral(ttlMeninggal).format('0,0');
+		document.getElementById("tbhMeninggal").innerHTML = numeral(tbhMeninggal).format('0,0');
+		document.getElementById("ttlSembuh").innerHTML = numeral(ttlSembuh).format('0,0');
+		document.getElementById("tbhSembuh").innerHTML = numeral(tbhSembuh).format('0,0');
 	  }
 	};
 	xmlhttp.open("GET", "https://persnickety-armor.000webhostapp.com/statistic.php", true);
