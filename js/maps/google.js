@@ -13,7 +13,7 @@ $(function () {
 		var ttlSembuh = myObj.sembuh.total;
 		var tbhSembuh = myObj.sembuh.tambahan;
 		
-		document.getElementById("ttlKonfirmasi").innerHTML = ttlKonfirmasi;
+		document.getElementById("ttlKonfirmasi").innerHTML = numeral(ttlKonfirmasi).format('0,0');
 		document.getElementById("tbhKonfirmasi").innerHTML = tbhKonfirmasi;
 		document.getElementById("ttlPerawatan").innerHTML = ttlPerawatan;
 		document.getElementById("tbhPerawatan").innerHTML = tbhPerawatan;
