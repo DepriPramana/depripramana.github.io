@@ -75,7 +75,8 @@ $(function () {
 			  $(document).ready(function(){
 			  $.getJSON( "https://persnickety-armor.000webhostapp.com/data.php?lat="+lat+"&lon="+lon, function( data ) {
 				  $('#dataTable').DataTable({
-					 "data" : data,
+					 data : data,
+					  deferRender: true,
 					 columns: [
 					   { "data": null,
 						   render: function (data, type, row, meta) {
