@@ -1,0 +1,17 @@
+<script src="https://apis.google.com/js/platform.js"></script>
+    <script type="text/javascript">
+      function onYtEvent(payload) {
+        if (payload.eventType == 'subscribe') {
+          // Add code to handle subscribe event.
+            alert("hello world")
+          });
+        } else if (payload.eventType == 'unsubscribe') {
+          // Add code to handle unsubscribe event.
+          alert("asdf");
+        }
+        if (window.console) { // for debugging only
+          window.console.log('YT event: ', payload);
+        }
+      }
+    </script>
+<div class="g-ytsubscribe" data-channelid="UCGsSHWM4ZraLZ8k6m4q4g-A" data-layout="default" data-count="hidden" data-onytevent="onYtEvent"></div>
