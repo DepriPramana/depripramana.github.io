@@ -41,6 +41,27 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Data Seluruh Indonesia</li>
                         </ol>
+			    <div class="row">
+			    <script src="https://apis.google.com/js/platform.js"></script>
+<div id="youtubeContainer"></div>   
+
+<script>
+
+function renderYtSubscribeButton(channel) {
+      var container = document.getElementById('youtubeContainer');
+      var options = {
+        'channel': channel,
+        'layout': 'default'
+      };
+      gapi.ytsubscribe.render(container, options);
+    }
+
+window.onload = function() {
+renderYtSubscribeButton("GoogleDevelopers");
+}  
+ 
+</script>
+			    </div>    
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
