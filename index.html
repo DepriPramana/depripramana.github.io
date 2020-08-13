@@ -42,25 +42,9 @@
                             <li class="breadcrumb-item active">Data Seluruh Indonesia</li>
                         </ol>
 			    <div class="row">
-			    <script src="https://apis.google.com/js/platform.js"></script>
-<div id="youtubeContainer"></div>   
-
-<script>
-
-function renderYtSubscribeButton(channel) {
-      var container = document.getElementById('youtubeContainer');
-      var options = {
-        'channel': channel,
-        'layout': 'default'
-      };
-      gapi.ytsubscribe.render(container, options);
-    }
-
-window.onload = function() {
-renderYtSubscribeButton("GoogleDevelopers");
-}  
- 
-</script>
+			    
+				    
+				    <div id="youtubeContainer"></div>   
 			    </div>    
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
@@ -159,5 +143,24 @@ renderYtSubscribeButton("GoogleDevelopers");
 		<!-- GMaps PLugin Js -->
 		<script src="plugins/gmaps/gmaps.js"></script>
 		<script src="js/maps/google.js"></script>
+	    
+	    <script src="https://apis.google.com/js/platform.js"></script>
+
+<script>
+
+function renderYtSubscribeButton(channel) {
+      var container = document.getElementById('youtubeContainer');
+      var options = {
+        'channel': channel,
+        'layout': 'default'
+      };
+      gapi.ytsubscribe.render(container, options);
+    }
+
+window.onload = function() {
+renderYtSubscribeButton("GoogleDevelopers");
+}  
+ 
+</script>
     </body>
 </html>
